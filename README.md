@@ -1,5 +1,6 @@
 # AutoCheck-DotNet
 - nome : Vitor Peruch
+  
 -> oque esse projeto faz?
   Realiza uma vistoria, avalia cada item do veículo, calcula a pontuação, identifica pendências e mostra um relatório final com a classificação do veículo.
   O AutoCheck é um sistema de vistoria de veículos desenvolvido em C#.Ele permite realizar uma vistoria em diferentes tipos de veículos,avaliando itens específicos de cada   categoria.
