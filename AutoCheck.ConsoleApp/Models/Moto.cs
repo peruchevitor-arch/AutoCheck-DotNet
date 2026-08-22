@@ -10,12 +10,13 @@ namespace Motos
         }
         public override List<string> ObterChecklistObrigatorio()
         {
-            return new List<string>
-            {
-                "Kit Transmissão/Corrente",
-                "Manetes de Freio/Embreagem",
-                "Pezinho Lateral"
-            };
+            List<string> checklist = base.ObterChecklistObrigatorio();
+
+            checklist.Add("Kit Transmissão/Corrente");
+            checklist.Add("Manetes de Freio/Embreagem");
+            checklist.Add("Pezinho Lateral");
+
+            return checklist;
         }
     }
 }

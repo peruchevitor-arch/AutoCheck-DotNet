@@ -10,6 +10,7 @@ namespace Vistoria
             if(Status == "Bom" || Status == "Regular" || Status == "Ruim")
             {
                 this.Status = Status;
+                this.Nome = Nome;
             }
         }
     }

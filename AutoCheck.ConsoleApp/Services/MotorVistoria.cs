@@ -32,16 +32,16 @@ namespace Motor
         public string Classificacao(Veiculo veiculo)
         {
             double percentual = Percentual(veiculo);
-            if(percentual >= 90 && percentual <= 100)
+            if (percentual >= 90)
             {
                 return "Aprovado com Excelência";
-            } else if(percentual >= 60 && percentual < 89)
+            }
+            else if (percentual >= 60)
             {
                 return "Aprovado com Apontamentos";
-            } else if(percentual >= 0 && percentual < 59)
-            {
-                return "Reprovado";
             }
+
+            return "Reprovado na Vistoria";
         }
         public void RelatorioPendencias(Veiculo veiculo)
         {
@@ -65,24 +65,35 @@ namespace Motor
                 }
             }
         }
-        public void Recomendacoes(Veiculo veiculo)
+        public void Relatorio(Veiculo veiculo)
         {
             foreach (ItemVistoria item in veiculo.VistoriaRealizada)
             {
-                    if (item.Status == "Ruim")
-            {
-                Console.WriteLine($"{item.Nome}: realizar troca ou reparo obrigatório.");
-            }
-            else if (item.Status == "Regular")
-            {
-                Console.WriteLine($"{item.Nome}: realizar revisão preventiva.");
-            }
+                Console.WriteLine(item.Nome + " -- status = " + item.Status + " -- pontuação = " + PontuacaoPorItem(item.Status));
             }
         }
-        public void GerarRelatorio(Veiculo veiculo)
+        public int PontuacaoTotal(Veiculo veiculo)
         {
-            Console.WriteLine("> Avaliação dos itens inspecionados :");
-            Recomendacoes(veiculo);
+            int pontuacaoTotal = 0;
+
+            foreach (ItemVistoria item in veiculo.VistoriaRealizada)
+            {
+                pontuacaoTotal += PontuacaoPorItem(item.Status);
+            }
+
+            return pontuacaoTotal;
+        }
+        public bool PossuiPendencias(Veiculo veiculo)
+        {
+            foreach (ItemVistoria item in veiculo.VistoriaRealizada)
+            {
+                if (item.Status == "Regular" || item.Status == "Ruim")
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

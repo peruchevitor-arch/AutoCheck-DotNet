@@ -7,7 +7,7 @@ namespace Veiculos
         public string Modelo { get; set; }
         public int Ano { get; set; }
         public int Quilometragem { get; set;}
-        public  List<ItemVistoria> VistoriaRealizada { get; set;}
+        public List<ItemVistoria> VistoriaRealizada { get; set;}
         public Veiculo(string Marca,string Modelo,int Ano,int Quilometragem)
         {
             this.Marca = Marca;
@@ -18,7 +18,7 @@ namespace Veiculos
             VistoriaRealizada = new List<ItemVistoria>();
         }
         public void AdicionarItemVistoriado(string Nome,string Status)
-        {
+        { 
             ItemVistoria item = new ItemVistoria(Nome, Status);
 
             VistoriaRealizada.Add(item);

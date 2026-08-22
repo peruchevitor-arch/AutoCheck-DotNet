@@ -10,12 +10,13 @@ namespace Carros
         }
         public override List<string> ObterChecklistObrigatorio()
         {
-            return new List<string>
-            {
-                "Estepe e Macaco",
-                "Triângulo de Sinalização",
-                "Ar Condicionado Funcional"
-            };
+            List<string> checklist = base.ObterChecklistObrigatorio();
+
+            checklist.Add("Estepe e Macaco");
+            checklist.Add("Triângulo de Sinalização");
+            checklist.Add("Ar Condicionado Funcional");
+
+            return checklist;
         }
     }
 }

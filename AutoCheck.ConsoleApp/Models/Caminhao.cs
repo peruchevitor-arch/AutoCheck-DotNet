@@ -12,12 +12,13 @@ namespace Caminhoes
         }
         public override List<string> ObterChecklistObrigatorio()
         {
-            return new List<string>
-            {
-                "Kit Transmissão/Corrente",
-                "Manetes de Freio/Embreagem",
-                "Pezinho Lateral"
-            };
+            List<string> checklist = base.ObterChecklistObrigatorio();
+
+            checklist.Add("Tacógrafo");
+            checklist.Add("Sistema de Freios a Ar");
+            checklist.Add("Trava e Lona da Caçamba");
+
+            return checklist;
         }
     }
 }
