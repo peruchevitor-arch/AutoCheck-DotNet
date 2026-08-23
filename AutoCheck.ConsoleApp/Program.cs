@@ -12,9 +12,14 @@ List<Veiculo> listaVeiculos = new List<Veiculo>();
 
 while (true)
 {
+    Console.Clear();
+    Console.WriteLine("");
     Console.WriteLine(" === AutoCheck - sistema de vistoria de veiculos === ");
+    Console.WriteLine("");
     Console.WriteLine(" 1 - Realizar Nova Vistoria: ");
+    Console.WriteLine("");
     Console.WriteLine(" 2 - Exibir Relatório das Vistorias: ");
+    Console.WriteLine("");
     Console.WriteLine(" 0 - Sair ");
     int opcao = int.Parse(Console.ReadLine());
     if(opcao == 0)
@@ -24,19 +29,27 @@ while (true)
     {
         Console.Clear();
         Console.WriteLine(" Qual o tipo de veiculo? ");
+        Console.WriteLine("");
         Console.WriteLine(" 1 - carro ");
+        Console.WriteLine("");
         Console.WriteLine(" 2 - moto ");
+        Console.WriteLine("");
         Console.WriteLine(" 3 - caminhão ");
+        Console.WriteLine("");
         int tipo = int.Parse(Console.ReadLine());
         Console.Clear();
         Console.WriteLine(" Qual a marca ? ");
         string Marca = Console.ReadLine();
+        Console.WriteLine("");
         Console.WriteLine(" Qual o modelo ? ");
         string Modelo = Console.ReadLine();
+        Console.WriteLine("");
         Console.WriteLine(" Qual o ano ? ");
         int Ano = int.Parse(Console.ReadLine());
+        Console.WriteLine("");
         Console.WriteLine(" Qual a quilometragem ? ");
         int Quilometragem = int.Parse(Console.ReadLine());
+        Console.WriteLine("");
 
         if (tipo == 1)
         {
