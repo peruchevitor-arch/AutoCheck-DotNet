@@ -1,5 +1,6 @@
 # AutoCheck-DotNet
 - nome : Vitor Peruch
+- link de video : https://drive.google.com/file/d/1Qd4Jpo9txGohisHH2obOaiCJeeVCwTME/view?usp=sharing
   
 -> oque esse projeto faz?
   Realiza uma vistoria, avalia cada item do veículo, calcula a pontuação, identifica pendências e mostra um relatório final com a classificação do veículo.
